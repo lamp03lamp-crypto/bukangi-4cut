@@ -22,6 +22,7 @@ const FRAME_H = PAD + CELL_H * 4 + GAP * 3 + FOOTER;                // 3460
 const FRAME_BG = 'assets/frame-bg.png';           // 선택: 없으면 기본 배경 사용
 const FRAME_OVERLAY = 'assets/frame-overlay.png'; // 선택: 투명 PNG 장식(없어도 됨)
 const FRAME_TITLE = '부캉이 인생네컷';
+const FRAME_PLACE = '북항친수공원';
 
 /* ---- 요소 ---- */
 const $ = (id) => document.getElementById(id);
@@ -228,14 +229,18 @@ async function buildResult() {
   if (overlay) ctx.drawImage(overlay, 0, 0, FRAME_W, FRAME_H);
 
   const footerTop = PAD + CELL_H * 4 + GAP * 3;
-  ctx.fillStyle = '#3b2f2f';
+  // 배경 위에서도 글씨가 잘 보이도록 반투명 패널
+  ctx.fillStyle = 'rgba(255,255,255,0.80)';
+  roundRect(ctx, PAD, footerTop + 20, CELL_W, FOOTER - 80, 44);
+  ctx.fill();
+  ctx.fillStyle = '#2b3a4a';
   ctx.textAlign = 'center';
-  ctx.font = '800 96px system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
-  ctx.fillText(FRAME_TITLE, FRAME_W / 2, footerTop + 130);
-  ctx.font = '600 48px system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
+  ctx.font = '800 92px system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
+  ctx.fillText(FRAME_TITLE, FRAME_W / 2, footerTop + 125);
+  ctx.font = '600 44px system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
   const d = new Date();
   const pad2 = (n) => String(n).padStart(2, '0');
-  ctx.fillText(d.getFullYear() + '.' + pad2(d.getMonth() + 1) + '.' + pad2(d.getDate()), FRAME_W / 2, footerTop + 210);
+  ctx.fillText(FRAME_PLACE + ' · ' + d.getFullYear() + '.' + pad2(d.getMonth() + 1) + '.' + pad2(d.getDate()), FRAME_W / 2, footerTop + 190);
 
   return c;
 }
