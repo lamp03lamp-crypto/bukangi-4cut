@@ -6,7 +6,7 @@
 ## 사용 준비
 1. `assets/` 폴더를 만들고 이미지를 넣어주세요 (자세한 제작법은 `PROMPTS.md`).
    - `bukangi-pose1.png` ~ `bukangi-pose4.png` (투명 PNG, 필수)
-   - `frame-bg.png`, `frame-overlay.png` (선택)
+   - `frame-bg.jpg`, `frame-overlay.png` (선택)
    - 이미지가 없어도 점선 박스 자리표시로 동작 확인은 가능해요.
 
 ## GitHub Pages 배포

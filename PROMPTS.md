@@ -11,7 +11,7 @@
 | 파일명 | 용도 | 비고 |
 |---|---|---|
 | bukangi-pose1.png ~ pose4.png | 컷별 부캉이 포즈 | 배경 제거 필수(투명 PNG), 3:4 세로 비율 |
-| frame-bg.png | 프레임 배경 (선택) | 9:16 세로 |
+| frame-bg.jpg | 프레임 배경 (선택) | 9:16 세로 |
 | frame-overlay.png | 프레임 위 장식 (선택) | 투명 PNG, 약 9:28 세로 |
 
 ---
@@ -61,7 +61,7 @@ Small sparkle accents allowed only touching the character's silhouette.
 
 ---
 
-## 5. 프레임 배경 (frame-bg.png)
+## 5. 프레임 배경 (frame-bg.jpg)
 
 사진 네 장이 중앙을 덮기 때문에 **가장자리와 아래쪽에만 장식**이 있으면 돼요.
 

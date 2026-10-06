@@ -16,10 +16,10 @@ const SHOTS = [
 
 /* ---- 최종 프레임 규격 (px) ---- */
 const CELL_W = 1000, CELL_H = 750;       // 사진 한 칸 (4:3)
-const PAD = 60, GAP = 40, FOOTER = 280;
+const PAD = 60, GAP = 40, FOOTER = 600;     // 아래 여백을 넓혀 배경(공원/바다)이 보이게
 const FRAME_W = CELL_W + PAD * 2;                                   // 1120
-const FRAME_H = PAD + CELL_H * 4 + GAP * 3 + FOOTER;                // 3460
-const FRAME_BG = 'assets/frame-bg.png';           // 선택: 없으면 기본 배경 사용
+const FRAME_H = PAD + CELL_H * 4 + GAP * 3 + FOOTER;                // 3780
+const FRAME_BG = 'assets/frame-bg.jpg';           // 선택: 없으면 기본 배경 사용
 const FRAME_OVERLAY = 'assets/frame-overlay.png'; // 선택: 투명 PNG 장식(없어도 됨)
 const FRAME_TITLE = '부캉이 인생네컷';
 const FRAME_PLACE = '북항친수공원';
@@ -230,17 +230,18 @@ async function buildResult() {
 
   const footerTop = PAD + CELL_H * 4 + GAP * 3;
   // 배경 위에서도 글씨가 잘 보이도록 반투명 패널
+  const panelY = footerTop + 40;            // 패널을 위쪽에 두고 아래는 배경 풍경을 보여줌
   ctx.fillStyle = 'rgba(255,255,255,0.80)';
-  roundRect(ctx, PAD, footerTop + 20, CELL_W, FOOTER - 80, 44);
+  roundRect(ctx, PAD, panelY, CELL_W, 220, 44);
   ctx.fill();
   ctx.fillStyle = '#2b3a4a';
   ctx.textAlign = 'center';
   ctx.font = '800 92px system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
-  ctx.fillText(FRAME_TITLE, FRAME_W / 2, footerTop + 125);
+  ctx.fillText(FRAME_TITLE, FRAME_W / 2, panelY + 105);
   ctx.font = '600 44px system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
   const d = new Date();
   const pad2 = (n) => String(n).padStart(2, '0');
-  ctx.fillText(FRAME_PLACE + ' · ' + d.getFullYear() + '.' + pad2(d.getMonth() + 1) + '.' + pad2(d.getDate()), FRAME_W / 2, footerTop + 190);
+  ctx.fillText(FRAME_PLACE + ' · ' + d.getFullYear() + '.' + pad2(d.getMonth() + 1) + '.' + pad2(d.getDate()), FRAME_W / 2, panelY + 175);
 
   return c;
 }

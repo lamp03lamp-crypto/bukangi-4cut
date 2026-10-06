@@ -38,7 +38,7 @@
 ## 6. 최종 프레임 사양
 - 1120 × 3460 px 세로 스트립, 사진 4장(각 1000×750, 4:3) + 하단 타이틀/날짜
 - 부캉이는 촬영 시점에 사진 안에 합성되므로, 다시 찍어도 위치가 정확히 일치
-- 배경(`frame-bg.png`)·장식(`frame-overlay.png`)은 선택. 없으면 기본 그라데이션으로 동작
+- 배경(`frame-bg.jpg`)·장식(`frame-overlay.png`)은 선택. 없으면 기본 그라데이션으로 동작
 
 ## 7. 기술 구성
 - 순수 HTML / CSS / JavaScript (프레임워크·빌드·외부 라이브러리 없음)
@@ -55,7 +55,7 @@ bukangi-4cut/
 ├─ PLAN.md
 └─ assets/
    ├─ bukangi-pose1.png ~ pose4.png
-   ├─ frame-bg.png        (선택)
+   ├─ frame-bg.jpg        (선택)
    └─ frame-overlay.png   (선택)
 ```
 
