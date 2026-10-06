@@ -1,4 +1,4 @@
-# 나노 바나나 이미지 프롬프트 (부캉이 인생네컷)
+# 나노 바나나 이미지 프롬프트 (부캉이 네컷사진)
 
 부캉이 = **흑상어**. 실제 상어라서 팔·손이 없으니 포즈는 **지느러미, 꼬리, 몸 기울기, 표정**으로 표현해요.
 귀엽고 친근한 캐릭터 느낌으로 가되, 실제 흑상어 외형(회색~검은빛 몸, 뾰족한 주둥이, 큰 등지느러미)은 유지하는 방향이에요.
@@ -69,7 +69,7 @@ Small sparkle accents allowed only touching the character's silhouette.
 Vertical photo-booth strip background, 9:16 portrait. Soft ocean-themed pastel gradient from light aqua
 to pale cream, with a subtle repeating pattern of tiny bubbles, shells, starfish and sparkles.
 Denser decorations along the left and right edges and at the bottom 15%, while the center area stays
-calm and low-contrast. Cute, clean, Korean "life four cuts" photo booth style.
+calm and low-contrast. Cute, clean, Korean four-cut photo booth style.
 No characters, no text, no photo frames, no borders drawn in the middle.
 ```
 

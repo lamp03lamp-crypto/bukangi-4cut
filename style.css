@@ -41,6 +41,16 @@ h1{margin:4px 0 2px;font-size:1.7rem}
 .flash.on{opacity:.9;transition:none}
 .guide{min-height:1.5em;font-weight:700;margin:12px 0 0}
 
+/* 시작 화면 부캉이 */
+.hero{display:flex;flex-direction:column;align-items:center;margin:8px 0 0}
+.hero-mascot{height:min(46vh,320px);width:auto;max-width:70%;object-fit:contain;user-select:none;
+  filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));animation:bob 2.6s ease-in-out infinite}
+.hero-shadow{width:120px;height:14px;margin-top:-6px;border-radius:50%;background:rgba(0,0,0,.18);filter:blur(4px);
+  animation:shadow 2.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+@keyframes shadow{0%,100%{transform:scaleX(1);opacity:.9}50%{transform:scaleX(.8);opacity:.6}}
+@media (prefers-reduced-motion:reduce){.hero-mascot,.hero-shadow{animation:none}}
+
 .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
 .thumbs canvas{width:100%;aspect-ratio:4/3;border-radius:8px;border:2px solid var(--line);background:#fff}
 

@@ -1,7 +1,7 @@
 'use strict';
 
 /* ============================================================
- * 부캉이 인생네컷 - app.js
+ * 부캉이 네컷사진 - app.js
  * - 외부 라이브러리/서버 통신 없음. 모든 처리는 브라우저 안에서만.
  * - 사용자 입력/외부 데이터를 HTML로 삽입하지 않음 (textContent만 사용).
  * ============================================================ */
@@ -21,7 +21,7 @@ const FRAME_W = CELL_W + PAD * 2;                                   // 1120
 const FRAME_H = PAD + CELL_H * 4 + GAP * 3 + FOOTER;                // 3780
 const FRAME_BG = 'assets/frame-bg.jpg';           // 선택: 없으면 기본 배경 사용
 const FRAME_OVERLAY = 'assets/frame-overlay.png'; // 선택: 투명 PNG 장식(없어도 됨)
-const FRAME_TITLE = '부캉이 인생네컷';
+const FRAME_TITLE = '부캉이 네컷사진';
 const FRAME_PLACE = '북항친수공원';
 
 /* ---- 요소 ---- */
