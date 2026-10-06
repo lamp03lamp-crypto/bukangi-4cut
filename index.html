@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; media-src 'self' blob:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>부캉이 인생네컷</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>부캉이 인생네컷</h1>
+      <p class="sub">사진은 내 기기에서만 처리돼요. 서버로 전송되지 않아요.</p>
+    </header>
+
+    <!-- 1. 시작 화면 -->
+    <section id="screen-start" class="screen active">
+      <p class="lead">부캉이가 포즈를 바꿔가며 함께 찍어줘요!<br>화면 속 부캉이 자리를 피해서 자리를 잡아보세요.</p>
+      <button id="btn-start" class="btn primary">카메라 켜고 시작하기</button>
+      <p id="start-error" class="error" role="alert" hidden></p>
+    </section>
+
+    <!-- 2. 촬영 화면 -->
+    <section id="screen-shoot" class="screen">
+      <div class="progress" id="progress" aria-live="polite"></div>
+      <div class="stage" id="stage">
+        <video id="video" playsinline muted autoplay></video>
+        <img id="mascot" alt="" draggable="false">
+        <div id="mascot-fallback" class="mascot-fallback" hidden></div>
+        <img id="still" alt="방금 찍은 사진 미리보기" hidden>
+        <div id="countdown" class="countdown" aria-live="assertive" hidden></div>
+        <div id="flash" class="flash"></div>
+      </div>
+      <p id="guide" class="guide"></p>
+      <div class="actions">
+        <button id="btn-shoot" class="btn primary">촬영 (3초 카운트다운)</button>
+        <button id="btn-retake" class="btn" hidden>다시 찍기</button>
+        <button id="btn-next" class="btn primary" hidden>다음으로</button>
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+    </section>
+
+    <!-- 3. 결과 화면 -->
+    <section id="screen-result" class="screen">
+      <h2>완성!</h2>
+      <canvas id="result" aria-label="완성된 네컷 사진"></canvas>
+      <div class="actions">
+        <button id="btn-download" class="btn primary">사진 다운로드</button>
+        <button id="btn-restart" class="btn">처음부터 다시</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
